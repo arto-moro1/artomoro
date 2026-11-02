@@ -1,0 +1,5 @@
+# Alamat sitemap harus URL lengkap. Sementara memakai subdomain Vercel.
+# Bila domain diganti, ubah baris Sitemap di bawah (lihat README, "Mengganti domain").
+User-agent: *
+Allow: /
+Sitemap: https://artomoro.vercel.app/sitemap.xml

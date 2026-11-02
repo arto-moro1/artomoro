@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Semua <loc> harus URL lengkap. Sementara memakai subdomain Vercel.
+     Bila domain diganti, ganti "https://artomoro.vercel.app" di seluruh berkas ini (lihat README, "Mengganti domain"). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://artomoro.vercel.app/</loc></url>
+<url><loc>https://artomoro.vercel.app/layanan</loc></url>
+<url><loc>https://artomoro.vercel.app/proyek</loc></url>
+<url><loc>https://artomoro.vercel.app/tentang</loc></url>
+<url><loc>https://artomoro.vercel.app/kontak</loc></url>
+</urlset>
