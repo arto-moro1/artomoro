@@ -4,6 +4,7 @@ import { services } from '../data/services'
 import { projects } from '../data/projects'
 import { media } from '../data/media'
 import Photo from '../components/Photo.vue'
+import HeroSlides from '../components/HeroSlides.vue'
 import CountUp from '../components/CountUp.vue'
 import WaButton from '../components/WaButton.vue'
 import PartnerList from '../components/PartnerList.vue'
@@ -13,12 +14,18 @@ import { messages } from '../utils/whatsapp'
 import { useSeo } from '../composables/useSeo'
 
 const years = new Date().getFullYear() - company.founded
+const caps = [
+  { t: 'Fabrikasi plant baru', s: 'Stone crusher semua kapasitas, 10 TPH sampai 300 TPH' },
+  { t: 'Bongkar pasang plant', s: 'Stone crusher second' },
+  { t: 'Pembuatan as sentrik (vibro)', s: 'dan rumah bearing' },
+  { t: 'Perlengkapan penunjang', s: 'Stone crusher dan mesin industri lainnya' },
+]
 const gallery = projects.slice(4, 11)
 const ratios = ['4/3', '3/4', '1/1', '3/4', '4/3', '1/1', '3/4']
 const why = [
   ['Layanan terpadu', 'Fabrikasi, perawatan, dan bongkar pasang ditangani satu tim.'],
   ['Pengerjaan custom', 'Dibuat sesuai gambar kerja dan spesifikasi Anda.'],
-  ['Pengalaman lintas wilayah', 'Pernah bekerja di Jawa, Kalimantan, dan Sulawesi.'],
+  ['Pengalaman lintas wilayah', 'Pernah bekerja di Jawa, Kalimantan, Sulawesi, Sumatera, dan Nusa Tenggara.'],
   ['Fokus mesin tambang dan plant industri', 'Stone crusher, batching plant, asphalt mixing plant, dan sejenisnya.'],
   ['Komunikasi langsung', 'Kebutuhan Anda dibahas langsung dengan penanggung jawab, tanpa perantara.'],
 ]
@@ -38,15 +45,18 @@ useSeo({
 
 <template>
   <section class="hero dk">
-    <img class="hero-media" :src="media.heroPhoto" alt="" fetchpriority="high" @error="$event.target.remove()">
-    <div class="w">
-      <h1>Fabrikasi, maintenance, dan rekondisi mesin industri dan pertambangan</h1>
-      <p>Mitra bengkel las dan bubut yang andal sejak {{ company.founded }}, melayani Jawa, Kalimantan, dan Sulawesi.</p>
+    <HeroSlides :photos="media.heroPhotos" />
+    <div class="w hero-main">
+      <span class="lbl">Melayani pengerjaan:</span>
+      <h1>Fabrikasi, Maintenance, Rekondisi, Mesin Industri dan Pertambangan</h1>
       <div class="row">
         <WaButton :message="messages.umum">Minta penawaran via WhatsApp</WaButton>
         <RouterLink class="btn" to="/layanan">Lihat layanan</RouterLink>
       </div>
     </div>
+    <div class="hero-strip"><div class="w">
+      <ul class="caps"><li v-for="(c, i) in caps" :key="c.t"><b>0{{ i + 1 }}</b><strong>{{ c.t }}</strong><span>{{ c.s }}</span></li></ul>
+    </div></div>
   </section>
 
   <section><div class="w two">
@@ -87,7 +97,7 @@ useSeo({
   </div></section>
 
   <section class="sf"><div class="w two">
-    <div><span class="lbl">Mitra</span><h2>Dipercaya oleh</h2><p>Perusahaan tambang, batching plant, dan kontraktor di tiga pulau.</p></div>
+    <div><span class="lbl">Mitra</span><h2>Dipercaya oleh</h2><p>Perusahaan tambang, batching plant, dan kontraktor di berbagai pulau.</p></div>
     <PartnerList />
   </div></section>
 

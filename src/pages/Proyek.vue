@@ -21,7 +21,7 @@ const step = (d) => { cur.value = (cur.value + d + shown.value.length) % shown.v
 
 useSeo({
   title: 'Proyek dan Mitra | Arto Moro Engineering',
-  description: 'Galeri pekerjaan fabrikasi, rekondisi, dan plant, serta daftar mitra di Jawa, Kalimantan, dan Sulawesi.',
+  description: 'Galeri pekerjaan fabrikasi, rekondisi, dan plant, serta daftar mitra dan wilayah kerja di Jawa, Kalimantan, Sulawesi, Sumatera, dan Nusa Tenggara.',
   path: '/proyek',
 })
 </script>
@@ -48,7 +48,7 @@ useSeo({
   <section><div class="w">
     <h2>Mitra</h2><PartnerList />
     <h3 style="margin-top:40px">Wilayah kerja</h3>
-    <div class="chips"><span v-for="r in company.regions" :key="r" class="chip" style="cursor:default">{{ r }}</span></div>
+    <div class="chips"><span v-for="r in company.regions" :key="r" class="chip" style="cursor:default">{{ r }}</span><span class="chip" style="cursor:default">Dan wilayah lainnya</span></div>
   </div></section>
   <CtaBanner />
 

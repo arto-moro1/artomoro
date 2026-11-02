@@ -5,7 +5,7 @@ export const services = [
     id: 'fabrikasi', image: '/img/002.webp', title: 'Fabrikasi dan Erection',
     short: 'Pembuatan peralatan dan konstruksi industri sesuai gambar kerja Anda.',
     summary: 'Pembuatan peralatan dan konstruksi industri sesuai gambar kerja atau spesifikasi pelanggan, dilanjutkan pemasangan hingga unit siap dioperasikan.',
-    scope: ['Stone Crusher', 'Batching Plant', 'Asphalt Mixing Plant', 'Konveyor', 'Vibrating Screen', 'As sentrik', 'Konstruksi baja dan pekerjaan lainnya'],
+    scope: ['Plant stone crusher baru, semua kapasitas 10 TPH sampai 300 TPH', 'As sentrik (vibro) dan rumah bearing', 'Perlengkapan penunjang stone crusher dan mesin industri lainnya', 'Batching plant', 'Asphalt mixing plant', 'Konveyor', 'Vibrating screen', 'Konstruksi baja dan pekerjaan lainnya'],
     cta: 'Tanya layanan fabrikasi', waMessage: messages.fabrikasi,
   },
   {
@@ -19,7 +19,7 @@ export const services = [
     id: 'bongkar-pasang', image: '/img/010.webp', title: 'Bongkar Pasang Plant Second',
     short: 'Pembongkaran, pemindahan, dan pemasangan kembali plant bekas.',
     summary: 'Pembongkaran, pemindahan, dan pemasangan kembali plant bekas, saat Anda memindahkan lokasi operasi atau membeli plant bekas yang perlu dipasang di lokasi baru.',
-    scope: ['Pembongkaran', 'Pemindahan', 'Pemasangan kembali'],
+    scope: ['Plant stone crusher second', 'Pembongkaran', 'Pemindahan', 'Pemasangan kembali'],
     cta: 'Tanya bongkar pasang', waMessage: messages['bongkar-pasang'],
   },
 ]

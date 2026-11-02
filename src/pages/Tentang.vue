@@ -22,7 +22,7 @@ useSeo({
       <dt>Berdiri</dt><dd>{{ company.founded }}</dd>
       <dt>Penanggung jawab</dt><dd>{{ company.owner }}</dd>
       <dt>Alamat</dt><dd>{{ company.address }}</dd>
-      <dt>Wilayah kerja</dt><dd>{{ company.regions.join(', ') }}</dd>
+      <dt>Wilayah kerja</dt><dd>{{ company.regions.join(', ') }}, dan wilayah lainnya</dd>
     </dl>
   </div></section>
   <section class="sf"><div class="w"><h2>Alur kerja</h2><ProcessTimeline /></div></section>
